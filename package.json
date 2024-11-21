@@ -1,7 +1,6 @@
 {
     "name": "ez-exporter",
     "module": "src/main.ts",
-    "type": "module",
     "devDependencies": {
         "@types/bun": "latest"
     },
@@ -11,5 +10,9 @@
     "scripts": {
         "build-win": "bun build src/main.ts --minify --compile --sourcemap --bytecode --target=bun-windows-x64 --outfile build/run_win",
         "build-linux": "bun build src/main.ts --minify --compile --sourcemap --bytecode --target=bun-linux-x64 --outfile build/run_linux"
+    },
+    "type": "module",
+    "dependencies": {
+        "@clack/prompts": "^0.8.1"
     }
 }
